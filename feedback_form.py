@@ -4,17 +4,10 @@ from tkinter import messagebox
 # import smtplib
 
 
-
-
-
-
 class FeedbackApp:
 
 
-
     def __init__(self, master):
-
-
 
 
         master.title('California Vacation Feedback')
@@ -30,12 +23,12 @@ class FeedbackApp:
         self.frameheader = ttk.Frame(master)
         self.frameheader.pack()
 
-        self.logo = PhotoImage(file ='/home/userlin/Dropbox/tour_logo.gif')
+        self.logo = PhotoImage(file ='/home/userlin/Dropbox/dropubun/Vacation-Feedback-Graphical-User-Interface/tour_logo.gif')
 
         ttk.Label(self.frameheader, image = self.logo).grid(row = 0, column= 0, rowspan= 3, padx=(15, 0))
         ttk.Label(self.frameheader,text='Thank You For Vacationing With Us!', style= 'Header.TLabel').grid(row=0, column=1, pady= 5, padx=(3, 15))
         ttk.Label(self.frameheader, wraplength=400,
-                  text=("We would like to improve our future services to you.\n " 
+                  text=("We would like to improve our future services to you.\n "
                         "To do so, please fill out this feedback form. \n "
                         "We greatly appreciate all that you do!"),
                   justify = CENTER).grid(row=1, column=1, padx=(0,40), pady=(0, 15))
@@ -93,9 +86,9 @@ class FeedbackApp:
 
     def submit(self):
         print('Feedback Form has been submitted ')
-              # 'Name: {}'.format(self.entry_name.get()),
-              # 'Email: {}'.format(self.entry_email.get()),
-              # 'Comment: {}'.format(self.textbox_comments.get(1.0,END)))
+        # 'Name: {}'.format(self.entry_name.get()),
+        # 'Email: {}'.format(self.entry_email.get()),
+        # 'Comment: {}'.format(self.textbox_comments.get(1.0,END)))
 
         print('Name: {}'.format(self.entry_name.get()))
         print('Email: {}'.format(self.entry_email.get()))
