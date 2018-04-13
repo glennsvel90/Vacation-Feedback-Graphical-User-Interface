@@ -4,7 +4,7 @@ This is a python graphical user interface for customers to send feedback to a po
 
 ## Getting Started
 
-Note: Change line 26 of the feedback_form.py file by replacing 
+Note: Change line 26 of the feedback_form.py file by replacing
 
 ```
 /home/userlin/Dropbox/dropubun/Vacation-Feedback-Graphical-User-Interface/tour_logo.gif
@@ -22,3 +22,7 @@ Python 3
 ```
 python feedback_form.py
 ```
+
+## GUI Preview
+
+![alt text](https://github.com/glennsvel90/Vacation-Feedback-Graphical-User-Interface/blob/master/GuiPreview.PNG "GUI Preview")
