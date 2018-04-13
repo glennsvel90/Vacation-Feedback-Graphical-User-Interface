@@ -23,7 +23,7 @@ class FeedbackApp:
         self.frameheader = ttk.Frame(master)
         self.frameheader.pack()
 
-        self.logo = PhotoImage(file ='/home/userlin/Dropbox/dropubun/Vacation-Feedback-Graphical-User-Interface/tour_logo.gif')
+        self.logo = PhotoImage(file ='/home/ubun/Dropbox/dropubun/Vacation-Feedback-Graphical-User-Interface/tour_logo.gif')
 
         ttk.Label(self.frameheader, image = self.logo).grid(row = 0, column= 0, rowspan= 3, padx=(15, 0))
         ttk.Label(self.frameheader,text='Thank You For Vacationing With Us!', style= 'Header.TLabel').grid(row=0, column=1, pady= 5, padx=(3, 15))
@@ -120,5 +120,3 @@ def main():
 
 
 if __name__ == "__main__": main()
-
-
