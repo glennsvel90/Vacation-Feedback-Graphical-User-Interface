@@ -5,10 +5,10 @@ from tkinter import messagebox
 
 
 class FeedbackApp:
-
+    """ Feedback form app """
 
     def __init__(self, master):
-
+        """ Inialize the gui """
 
         master.title('California Vacation Feedback')
         master.resizable(False, False)
@@ -37,12 +37,9 @@ class FeedbackApp:
         self.framebody = ttk.Frame(master)
         self.framebody.pack()
 
-
-
         ttk.Label(self.framebody, text= 'Name:').grid(row=0, column=0, padx= 5, sticky='sw')
         ttk.Label(self.framebody, text= 'Email:').grid(row=0, column=1, padx= 5, sticky='sw')
         ttk.Label(self.framebody, text= 'Comments:').grid(row=2, column= 0, padx=5,pady= (5,0), sticky='sw')
-
 
         self.entry_name = ttk.Entry(self.framebody, width=27, font=('Helvetica', 10))
         self.entry_email = ttk.Entry(self.framebody, width=27, font=('Helvetica', 10))
@@ -51,72 +48,35 @@ class FeedbackApp:
         self.entry_name.grid(row=1, column=0, padx=5)
         self.entry_email.grid(row=1, column=1, padx=5)
         self.textbox_comments.grid(row=3, column=0, padx=5, columnspan=2)
-
-
         ttk.Button(self.framebody, text='Submit', command=self.submit).grid(row=4, column=0, columnspan=2, padx=5, pady=5)
-        #
-        # self.SERVER = "localhost"
-        #
-        # self.FROM = "california@vacations.com"
-        # self.TO = ["sonyericson718@gmail.com"] # must be a list
-        #
-        # self.SUBJECT = "Feedback from {}".format(self.entry_name.get())
-        #
-        # self.TEXT = 'Name: {}\n'.format(self.entry_name.get()),\
-        #             'Email: {}\n'.format(self.entry_email.get()),\
-        #             'Comment: {}\n'.format(self.textbox_comments.get(1.0, 'end'))
-        #
-        # # Prepare actual message
-        #
-        # self.message = """\
-        #             From: {}
-        #             To: {}
-        #             Subject: {}
-        #
-        #             {}
-        #             """.format(self.FROM, ", ".join(self.TO), self.SUBJECT, self.TEXT)
-        #
-        # # Send the mail
-        #
-        # self.server = smtplib.SMTP(self.SERVER)
-        # self.server.sendmail(self.FROM, self.TO, message)
-
-
 
 
     def submit(self):
+        """ Make appear the submit message """
+        
         print('Feedback Form has been submitted ')
-        # 'Name: {}'.format(self.entry_name.get()),
-        # 'Email: {}'.format(self.entry_email.get()),
-        # 'Comment: {}'.format(self.textbox_comments.get(1.0,END)))
-
         print('Name: {}'.format(self.entry_name.get()))
         print('Email: {}'.format(self.entry_email.get()))
         print('Comment: {}'.format(self.textbox_comments.get(1.0, 'end')))
-
-
         self.clear()
 
         messagebox.showinfo(title= 'Feedback Form has been submitted',
                             message=('Feedback Form has been submitted. Thank you so much!'))
 
     def clear(self):
+        """ clear the contents of the email and name """
         self.textbox_comments.delete('1.0', 'end')
         self.entry_email.delete(0, END)
         self.entry_name.delete(0, END)
-
-
         self.server.quit()
 
 
 def main():
+    """ starts the app loop """
 
     root = Tk()
-
     app = FeedbackApp(root)
-
     root.mainloop()
-
 
 
 if __name__ == "__main__": main()
